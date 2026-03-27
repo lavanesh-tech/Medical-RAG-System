@@ -1,0 +1,137 @@
+:root {
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #111827;
+  --bot: #e5e7eb;
+  --user: #2563eb;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #f9fafb;
+  --bot: #1f2937;
+  --user: #3b82f6;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+/* CHAT CONTAINER */
+.chat {
+  width: 420px;
+  height: 600px;
+  background: var(--card);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* HEADER */
+.header {
+  padding: 12px 15px;
+  background: #111827;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* MESSAGES AREA */
+.messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* MESSAGE BOX */
+.msg {
+  max-width: 75%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  animation: fade 0.2s ease-in;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* USER MESSAGE */
+.user {
+  align-self: flex-end;
+  background: var(--user);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+/* BOT MESSAGE */
+.bot {
+  align-self: flex-start;
+  background: var(--bot);
+  color: var(--text);
+  border-bottom-left-radius: 4px;
+}
+
+/* TYPING */
+.typing {
+  font-size: 12px;
+  opacity: 0.7;
+  font-style: italic;
+}
+
+/* INPUT AREA */
+.input-box {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+button {
+  margin-left: 8px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1e40af;
+}
+
+/* DARK MODE BUTTON */
+.toggle {
+  cursor: pointer;
+  font-size: 14px;
+  background: transparent;
+  border: 1px solid white;
+  padding: 4px 8px;
+  border-radius: 6px;
+}

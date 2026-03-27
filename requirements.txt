@@ -1,10 +1,13 @@
 langchain==0.3.26
-flask==3.1.1
-sentence-transformers==4.1.0
-pypdf==5.6.1
-python-dotenv==1.1.0
-langchain-pinecone==0.2.8
-langchain-openai==0.3.24
 langchain-community==0.3.26
-
--e .
+langchain-core>=0.3.0,<0.4.0
+langchain-huggingface>=0.1.0
+langchain-openai==0.3.24
+langchain-pinecone==0.2.8
+pinecone[asyncio]>=6.0.0,<8.0.0
+langchain-text-splitters>=0.3.0,<0.4.0
+flask==3.1.1
+python-dotenv==1.1.0
+pypdf==5.6.1
+sentence-transformers==4.1.0
+tiktoken>=0.7.0
